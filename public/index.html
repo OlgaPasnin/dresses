@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+    <title>Document</title>
+
+    <!-- Compiled and minified CSS -->
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+        <div id="dress-list"></div>
+        <script id="my-template" type="text/x-handlebars-template">
+            <div class="row">
+                <div id={{_id}} class="col s4 dress">Style: {{style}}, color: {{color}}, size: {{size}}</div>
+                <div class="col s4"><a class="edit-button waves-effect waves-light btn {{_id}}">Edit</a></div>
+                <div class="col s4">  <a class="delete-button btn-floating waves-effect waves-light red {{_id}}"><i class="material-icons">delete</i></a></div>
+            </div>
+        </script>
+
+        <form id="dress-form" action="#">
+          <h4><span id="formHeader">Add</span> a dress</h4>
+          <div class="row">
+            <div class="col s12">
+              <input type="text" name="style" placeholder="Style?" id ="style">
+            </div>
+
+            <div class="col s12">
+              <input type="text" name="size" placeholder="Size?" id ="size">
+            </div>
+
+
+            <div class="col s12">
+              <input type="text" name="color" placeholder="Color" id ="color">
+            </div>
+            <div class="col s12">
+              <button class="waves-effect waves-light btn submit-button" type="submit">Submit</button>
+            </div>
+
+          </div>
+
+        </form>
+
+     </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
